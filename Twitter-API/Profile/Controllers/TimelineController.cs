@@ -1,6 +1,6 @@
 ﻿namespace Profile.Controllers
 {
-    public class ProfileController
+    public class TimelineController
     {
     }
 }
