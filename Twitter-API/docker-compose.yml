@@ -1,0 +1,7 @@
+services:
+  postservice:
+    build:
+      context: .
+      dockerfile: Post-API\Dockerfile
+    ports:
+      - 8090:8080
