@@ -13,6 +13,8 @@ namespace TimelineRepo
 
         Task AddPostToTimeline(Post newpost);
 
+        public Timeline GetTimeline(int timelineId);
+
         
     }
 }

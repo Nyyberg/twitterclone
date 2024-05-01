@@ -36,5 +36,19 @@ namespace TimelineRepo
             }
             return newtimeline;
         }
+
+        public Timeline GetTimeline(int timelineId)
+        {
+            using (var context = new TimelineDbContext(_options, Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped))
+            {
+                var timeline = context.Timelines.Find(timelineId);
+                if (timeline == null)
+                {
+                    throw new ArgumentException("Timeline not found.", nameof(timelineId));
+                }
+                return timeline;
+            }
+
+        }
     }
 }
