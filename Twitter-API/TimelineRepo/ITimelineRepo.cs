@@ -9,6 +9,10 @@ namespace TimelineRepo
 {
     public interface ITimelineRepo
     {
-       public List<Post> GetAllPostsToTimeline { get; }
+        public Timeline CreateTimeline(Timeline newtimeline);
+
+        Task AddPostToTimeline(Post newpost);
+
+        
     }
 }

@@ -10,7 +10,7 @@ namespace DTO
     {
         public int id {  get; set; }
 
-        public List<Post> posts { get; set; }
+        public List<int> PostIDs { get; set; } = new List<int>();
 
     }
     

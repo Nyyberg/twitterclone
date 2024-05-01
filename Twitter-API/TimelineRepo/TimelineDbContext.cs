@@ -21,6 +21,6 @@ namespace TimelineRepo
 
         }
 
-        public DbSet<Timeline> timelines { get; set; }
+        public DbSet<Timeline> Timelines { get; set; }
     }
 }
