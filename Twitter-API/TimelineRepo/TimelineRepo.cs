@@ -8,7 +8,7 @@ namespace TimelineRepo
     {
         private DbContextOptions<TimelineDbContext> _options;
 
-        public TimelineRepo(TimelineDbContext db) 
+        public TimelineRepo() 
         {
             _options = new DbContextOptionsBuilder<TimelineDbContext>().UseInMemoryDatabase("TimelineDB").Options;
         }

@@ -11,7 +11,7 @@ namespace PostRepo
     {
         public List<Post> GetAllPosts();
         public Post GetById(int id);
-        public Post CreatePost(Post post);
+        public Task<Post> CreatePost(Post post);
         public void UpdatePost(Post post);
         public void DeletePost(int id);
     }

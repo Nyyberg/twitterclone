@@ -5,3 +5,17 @@ services:
       dockerfile: Post-API\Dockerfile
     ports:
       - 8090:8080
+  timlineservice:
+    build:
+      context: .
+      dockerfile: Profile\Dockerfile
+    ports:
+      - 8091:8080
+  rabbitmq:
+    image: "rabbitmq:3-management-alpine"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"

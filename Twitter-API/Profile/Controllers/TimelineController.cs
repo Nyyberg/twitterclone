@@ -17,7 +17,7 @@ namespace Profile.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTimeline(GetTimelineDTO getTimeline)
         {
-            var timeline = _timelineService.GetTimeline(getTimeline.UserId);
+            var timeline = _timelineService.GetTimeline(getTimeline.TimelineID);
             return Ok(timeline);
         }
 

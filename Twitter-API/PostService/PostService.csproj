@@ -8,10 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MessagingService\MessagingService.csproj" />
     <ProjectReference Include="..\PostRepo\PostRepo.csproj" />
+    <ProjectReference Include="..\SharedMessages\SharedMessages.csproj" />
   </ItemGroup>
 
 </Project>

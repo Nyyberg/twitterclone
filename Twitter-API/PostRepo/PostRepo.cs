@@ -22,11 +22,11 @@ namespace PostRepo
         
 
 
-        public Post CreatePost(Post post)
+        public async Task<Post> CreatePost(Post post)
         {
             using (var context = new RepoDbContext(repoContextOptions, ServiceLifetime.Scoped))
             {
-                context.posts.Add(post);
+                 context.posts.Add(post);
                 context.SaveChanges();
                 return post;
             }

@@ -8,6 +8,6 @@ namespace TimelineService.DTOs
 {
     public class GetTimelineDTO
     {
-        public int UserId { get; set; }
+        public int TimelineID { get; set; }
     }
 }

@@ -7,11 +7,5 @@
 
         public int TimelineId { get; set; }
 
-        public AddPostToTimeline(string message, int postID, int timlineId)
-        {
-            Message = message;
-            PostId = postID;
-            TimelineId = timlineId;
-        }
     }
 }

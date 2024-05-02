@@ -8,7 +8,7 @@ namespace DTO
 {
     public class Timeline
     {
-        public int id {  get; set; }
+        public int timelineid {  get; set; }
 
         public List<int> PostIDs { get; set; } = new List<int>();
 

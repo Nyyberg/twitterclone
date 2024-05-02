@@ -1,5 +1,7 @@
 using AutoMapper;
 using DTO;
+using EasyNetQ;
+using MessagingService;
 using PostRepo;
 using PostService;
 using PostService.DTOs;
@@ -23,7 +25,7 @@ builder.Services.AddScoped<IPostRepo, PostRepo.PostRepo>();
 builder.Services.AddScoped<IPostService, PostService.PostService>();
 builder.Services.AddDbContext<RepoDbContext>();
 #endregion
-
+builder.Services.AddSingleton(new MessagingClient(RabbitHutch.CreateBus("host=rabbitmq;port=5672;virtualHost=/;username=guest;password=guest")));
 
 var app = builder.Build();
 

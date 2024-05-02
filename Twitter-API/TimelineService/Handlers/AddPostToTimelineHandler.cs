@@ -29,7 +29,6 @@ namespace TimelineService.Handlers
             {
                 PostId = message.PostId,
                 TimelineId = message.TimelineId
-                
             };
             await timelineservice.AddPostToTimeline(post);
         }

@@ -25,9 +25,9 @@ namespace Post_API.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreatePost([FromBody]AddPostDTO addPostDTO)
+        public async Task<IActionResult> CreatePost([FromBody]AddPostDTO addPostDTO)
         {
-            var post = _postService.CreatePost(addPostDTO);
+            var post = await _postService.CreatePost(addPostDTO);
             return Ok(post);
         }
 
