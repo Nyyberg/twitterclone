@@ -25,7 +25,6 @@ builder.Services.AddSingleton(mapper);
 #endregion
 
 #region DependencyInjection
-builder.Services.AddDbContext<TimelineDbContext>();
 builder.Services.AddScoped<ITimelineRepo, TimelineRepo.TimelineRepo>();
 builder.Services.AddScoped<ITimelineService, TimelineService.TimelineService>();
 #endregion

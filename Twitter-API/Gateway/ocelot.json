@@ -1,0 +1,100 @@
+{
+  "Routes": [
+    {
+    "DownstreamPathTemplate": "/post",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "Postservice",
+        "Port": "8080"
+      }
+    ],
+    "UpstreamPathTemplate": "/api/CreatePost",
+    "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/post",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts":[
+       {
+        "Host": "Postservice",
+        "Port": "8080"
+       }
+      ],
+      "UpstreamPathTemplate": "/api/DeletePost",
+      "UpstreamHttpMethod": ["DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/post",
+      "DownstreamScheme":"http",
+      "DownstreamHostAndPorts":[
+        {
+          "Host": "Postservice",
+          "Port": "8080"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/GetAllPosts",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/post",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "Postservice",
+          "Port": "8080"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/UpdatePost",
+      "UpstreamHttpMethod": ["PUT"]
+    },
+    {
+      "DownstreamPathTemplate": "/post/GetPost",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "Postservice",
+          "Port": "8080"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/GetPost",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/timeline",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "TimlineService",
+          "Port": "8080"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/CreateTimeline",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/timeline",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "TimlineService",
+          "Port": "8080"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/GetTimeline",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/timeline/AddPostToTimeline",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "TimlineService",
+          "Port": "8080"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/AddPostToTimeline",
+      "UpstreamHttpMethod": ["POST"]
+    }
+]
+}

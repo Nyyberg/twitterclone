@@ -2,7 +2,7 @@
 
 namespace MessagingService
 {
-    public class MessagingClient
+    public class MessagingClient : IMessagingClient
     {
         private readonly IBus _bus;
 
@@ -20,5 +20,6 @@ namespace MessagingService
         {
             await Task.Run(() => { _bus.PubSub.SubscribeAsync(topic, handler); });
         }
+
     }
 }

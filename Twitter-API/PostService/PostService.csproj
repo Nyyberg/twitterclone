@@ -14,7 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MessagingService\MessagingService.csproj" />
     <ProjectReference Include="..\PostRepo\PostRepo.csproj" />
-    <ProjectReference Include="..\SharedMessages\SharedMessages.csproj" />
   </ItemGroup>
 
 </Project>

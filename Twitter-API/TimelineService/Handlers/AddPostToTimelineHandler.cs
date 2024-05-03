@@ -19,10 +19,12 @@ namespace TimelineService.Handlers
         public AddPostToTimelineHandler(IServiceProvider serviceProvider) 
         { 
             _serviceProvider = serviceProvider;
+            Console.WriteLine("construction handler");
         }
 
         public async void HandlePostToTimeline(AddPostToTimeline message)    
         {
+            Console.WriteLine("message from NASA");
             using var Scope = _serviceProvider.CreateScope();
             var timelineservice = Scope.ServiceProvider.GetRequiredService<ITimelineService>();
             var post = new AddPostToTimelineDTO()
@@ -36,8 +38,10 @@ namespace TimelineService.Handlers
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            Console.WriteLine("executing async");
+            //var messageClient = new MessagingClient(RabbitHutch.CreateBus("host=rabbitmq;port=5672;virtualHost=/;username=guest;password=guest"));
             var messageClient = new MessagingClient(RabbitHutch.CreateBus("host=rabbitmq;port=5672;virtualHost=/;username=guest;password=guest"));
-            string topic = "AddPostToTimeline";
+            string topic = "NASA";
 
             await messageClient.Listen<AddPostToTimeline>(HandlePostToTimeline, topic);
         }

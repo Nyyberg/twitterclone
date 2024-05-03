@@ -19,3 +19,9 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: "guest"
       RABBITMQ_DEFAULT_PASS: "guest"
+  gatewayservice:
+    build:
+      context: .
+      dockerfile: \Gateway\Dockerfile
+    ports:
+      - 8092:8080

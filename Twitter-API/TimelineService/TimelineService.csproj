@@ -8,13 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="EasyNetQ" Version="7.8.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MessagingService\MessagingService.csproj" />
-    <ProjectReference Include="..\SharedMessages\SharedMessages.csproj" />
     <ProjectReference Include="..\TimelineRepo\TimelineRepo.csproj" />
   </ItemGroup>
 
