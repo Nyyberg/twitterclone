@@ -11,7 +11,7 @@ namespace PostService
     public interface IPostService
     {
         public List<Post> GetAllPosts();
-        public Post GetById(AddPostDTO postID);
+        public Post GetById(int id);
         public Task<Post> CreatePost(AddPostDTO addPost);
         public void UpdatePost(UpdatePostDTO updatePost);
         public void DeletePost(int id);
