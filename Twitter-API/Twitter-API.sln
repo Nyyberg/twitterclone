@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessagingService", "Messagi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{A004ECFA-0366-4C01-836E-9EB28A333304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{D1E282C8-0FC7-484B-8452-D9A25FDF691E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "Gateway\Gateway.csproj", "{D1E282C8-0FC7-484B-8452-D9A25FDF691E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posttest", "Posttest\Posttest.csproj", "{4DCC0118-62E3-4FA8-93B3-FEF45EAD2807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Posttest", "Posttest\Posttest.csproj", "{4DCC0118-62E3-4FA8-93B3-FEF45EAD2807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTest", "ServiceTest\ServiceTest.csproj", "{281A38B6-3A3F-4064-AC22-5251651FE616}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{4DCC0118-62E3-4FA8-93B3-FEF45EAD2807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCC0118-62E3-4FA8-93B3-FEF45EAD2807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCC0118-62E3-4FA8-93B3-FEF45EAD2807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281A38B6-3A3F-4064-AC22-5251651FE616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281A38B6-3A3F-4064-AC22-5251651FE616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281A38B6-3A3F-4064-AC22-5251651FE616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281A38B6-3A3F-4064-AC22-5251651FE616}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DTO;
+using Microsoft.AspNetCore.Mvc;
 using PostService;
 using PostService.DTOs;
+using System.Text.Json;
 
 namespace Post_API.Controllers
 {
@@ -43,6 +45,16 @@ namespace Post_API.Controllers
         {
             _postService.UpdatePost(updatePostDTO);
             return Ok();
+        }
+
+        [HttpGet]
+        public async Task<Timeline> Get()
+        {
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync("Http://localhost:8080/timline");
+            string jsondata = await response.Content.ReadAsStringAsync();
+            Timeline timeline = JsonSerializer.Deserialize<Timeline>(jsondata);
+            return timeline;
         }
 
         [HttpGet]
